@@ -72,6 +72,9 @@ banner area
     top: 8%;
 }
 
+/*------------------
+ responsive for tablet
+------------------ */
 @media screen and (min-width:768px) and (max-width:991px) {
     .banner-info {
         margin-top: 50px;
@@ -89,6 +92,9 @@ banner area
     }
 }
 
+/* -----------
+responsive for mobile
+--------------- */
 @media screen and (max-width:767px) {
     .container {
         padding-bottom: 16%;
