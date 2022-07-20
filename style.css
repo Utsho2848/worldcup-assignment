@@ -45,6 +45,15 @@ a {
     border: 2px solid #161616;
 }
 
+/* animation */
+.watch-button:hover a {
+    transition: .3s;
+    transform: translateX(4px);
+    background-color: #161616;
+    border: 1px solid #DD0000;
+
+}
+
 /* header mobile view responsive */
 @media screen and (max-width:556px) {
     .banner-contents {
@@ -102,6 +111,14 @@ a {
 
 #active-btn {
     background-color: #DD0000;
+    color: #FFFFFF;
+}
+
+.aside-buttons a:hover {
+    transition: .3s;
+    transform: translateX(4px);
+    background-color: #161616;
+    border: 1px solid #DD0000;
     color: #FFFFFF;
 }
 
