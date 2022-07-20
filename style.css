@@ -1,132 +1,147 @@
-/* ---------
-google font
----------- */
+/* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* ------------
-universal style
------------- */
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
-    margin: 2% 5% 5% 5%;
-    background-color: #161616;
-    color: #FFFFFF;
-    background-size: cover;
-    height: 100%;
-    border-radius: 20px;
+    margin: 2% 5% 0;
+}
+
+.all-contents {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: auto auto 100px;
 }
 
-.common-button {
-    padding: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 2px solid #161616;
-}
-
-/* -------------
-banner area
--------------- */
-.banner-area {
+.banner-contents {
+    grid-column: 1/-1;
+    background-color: #161616;
+    border-radius: 20px;
+    color: #FFFFFF;
+    padding: 2% 5% 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 5%;
-    width: 100%;
+    margin-bottom: 25px;
 }
 
-.banner-info {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-.banner-info h1 {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 60px;
-}
-
-.banner-info p {
+.watch-button {
     margin: 20px 0;
 }
 
-
-.watch-button {
+.watch-button a {
     background-color: #DD0000;
     font-size: 20px;
     color: #FFFFFF;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #161616;
 }
 
-
-.banner-photo {
-    margin-right: 2%;
-}
-
-.banner-photo img {
-    position: relative;
-    top: 8%;
-}
-
-/*------------------
- responsive for tablet
------------------- */
-@media screen and (min-width:768px) and (max-width:991px) {
-    .banner-info {
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
-    .banner-info h1 {
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 60px;
-    }
-
-    .banner-photo img {
-        width: 70%;
-    }
-}
-
-/* -----------
-responsive for mobile
---------------- */
-@media screen and (max-width:767px) {
-    .container {
-        padding-bottom: 16%;
-    }
-
-    .banner-area {
-        width: 100%;
+/* header mobile view responsive */
+@media screen and (max-width:556px) {
+    .banner-contents {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        margin: 2% 5%;
+        grid-template-columns: repeat(1, auto);
     }
 
     .banner-info {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 2% 5%;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
     }
 
     .banner-info p {
-        width: 95%;
         height: 50px;
         overflow: hidden;
         text-overflow: ellipsis;
+
     }
 
-    .banner-photo {
-        display: flex;
-        justify-content: center;
-    }
-
-    .banner-photo img {
-        width: 70%;
+    .banner-img img {
+        width: 80%;
     }
 }
+
+/* banner-area completed */
+
+/* aside */
+.aside {
+
+    grid-column: 1/-11;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 2fr));
+    margin-right: 5px;
+}
+
+.aside-buttons {
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #dfdcdccc;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.aside-buttons a {
+    height: 30px;
+    width: 180px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: .1px solid #00000045;
+}
+
+#active-btn {
+    background-color: #DD0000;
+    color: #FFFFFF;
+}
+
+/*-----------------
+ aside tablet responsive
+ --------------------- */
+@media screen and (min-width:557px) and (max-width:991px) {
+    .banner-contents {
+        grid-template-columns: 7fr 5fr;
+    }
+
+    .banner-img img {
+        width: 90%;
+    }
+
+    .aside {
+        grid-column: 1/-1;
+        margin-bottom: 20px;
+    }
+
+    .aside-buttons {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/*------------------
+ aside mobile responsive 
+ -------------------*/
+@media screen and (max-width:556px) {
+    .aside {
+        grid-column: 1/-1;
+        margin-bottom: 20px;
+    }
+
+    .aside-buttons {
+        align-items: center;
+    }
+}
+
+/*-----------------
+ aside ended 
+ ------------------*/
