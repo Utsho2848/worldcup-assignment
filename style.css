@@ -286,8 +286,9 @@ footer .main {
     justify-content: center;
 }
 
-.footer-icon p {
+.footer-icon a {
     margin: 0 20px;
+    color: #FFFFFF;
 }
 
 /* responsive */
