@@ -18,7 +18,7 @@ a {
 .all-contents {
     display: grid;
     grid-template-columns: repeat(12, auto);
-    grid-template-rows: auto auto 100px;
+    grid-template-rows: auto auto auto;
 }
 
 .banner-contents {
@@ -221,5 +221,51 @@ a {
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
 
+    }
+}
+
+/* footer */
+footer {
+    padding: 20px 0;
+    background-color: #161616;
+    color: #FFFFFF;
+}
+
+footer .main {
+    text-align: center;
+    font-size: 24px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text a {
+    margin: 20px 10px;
+    color: white;
+}
+
+.footer-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon p {
+    margin: 0 20px;
+}
+
+/* responsive */
+@media screen and (min-width:557px) and (max-width:991px) {
+    .footer-text {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width:556px) {
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
     }
 }
